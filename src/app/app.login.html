@@ -1,0 +1,31 @@
+<head>
+    <script>
+        function verificarLogin() {
+            var nomeUsuario = document.getElementById("nome-usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (nomeUsuario === "" || senha === "") {
+                document.getElementById("mensagem").innerHTML = "Por favor, preencha todos os campos.";
+                return;
+            }
+
+            if (nomeUsuario === "usuario" && senha === "senha") {
+                window.location.href = "src/app/app.component.html";
+            } else {
+                document.getElementById("mensagem").innerHTML = "Nome de usuário ou senha incorretos.";
+            }
+        }
+    </script>
+</head>
+
+<body class="margem">
+    <h1>Entre com suas informações de login</h1>
+    <label for="nome-usuario">Nome de usuário:</label>
+    <input type="text" id="nome-usuario"><br><br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha"><br><br>
+    <button type="button" onclick="verificarLogin()">Enviar</button>
+    <div id="mensagem"></div>
+</body>
+
+<script type="text/javascript" src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>               
