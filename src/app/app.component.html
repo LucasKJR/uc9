@@ -1,1 +1,27 @@
+<header>
+    <!--Parte superior do site, LOGO, Caixa de pesquisa, Carrinho e Login-->
+    <div class="cabecalho">
+        <a routerLink="/home">
+            <img class="logo" id="logo-site" src="/assets/img/Logo Gamemania (2).png" alt="Logo GameMania">
+      </a>
+      <h1 class ="titulo">Game Center</h1>
+      <div class="menu">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="login-container">
+        <a routerLink="/login">
+          <button type="button" class="btn btn-primary">LOGIN</button>
+        </a>
+      </div>
+    </div>
+  </header>
+
 <router-outlet></router-outlet>
+

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "lucas",
+      "password": "1234",
+      "ïdade": "20"
+    },
+    {
+      "email": "thiago@gmail.com",
+      "password": "$2a$10$Qyv/eoNUpYa7mKgi08I6WOnfVXHb30S/WGJL7oDf2gy7d0U8DMo8.",
+      "nome": "thiago",
+      "id": 2
+    },
+    {
+      "email": "teste@gmail.com",
+      "password": "$2a$10$mDspxvRYv1ijwCR4Ylnc9OT8t/Bh5sWnUa2NcoN9f4052WcprGLZi",
+      "nome": "teste",
+      "id": 3
+    }
+  ]
+}

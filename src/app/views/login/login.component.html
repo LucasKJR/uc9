@@ -1,43 +1,21 @@
-<!DOCTYPE html>
 
-<html lang="pt-br">
-
-    <head>
-        <script>
-            function verificarLogin() {
-                var nomeUsuario = document.getElementById("nome-usuario").value;
-                var senha = document.getElementById("senha").value;
-    
-                if (nomeUsuario === "" || senha === "") {
-                    document.getElementById("mensagem").innerHTML = "Por favor, preencha todos os campos.";
-                    return;
-                }
-    
-                if (nomeUsuario === "usuario" && senha === "senha") {
-                    window.location.href = "index.html";
-                } else {
-                    document.getElementById("mensagem").innerHTML = "Nome de usuário ou senha incorretos.";
-                }
-            }
-        </script>
-    </head>
-    
-    <div class="margem">
-
-        <form>
-                  <label class ="tit">Insira suas informacoes</label>
   
-        <label for="nome-usuario">Nome de usuário:</label>
-        <input type="text" id="nome-usuario"><br><br>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha"><br><br>
-        <button type="button" onclick="verificarLogin()">Enviar</button>
-        <div id="mensagem"></div>
-         </form>
-        </div>
 
-<script type="text/javascript" src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>               
-</html>
-            
+    <form (ngSubmit)="receberDados()">
+      <div class="bloco">
+      <div class="campo-label">
+        <label class="labelmail"for="email">email </label>
+        <input  class="inputmail"type="email" name="email" placeholder="Ex.:email@gmail.com"[(ngModel)]="userModel.email">
+      </div>
+
+      <div class="campo-label">
+        <label  class="labelsenha"for="senha">senha </label>
+        <input class="inputsenha"type="password" name="password" id="senha" placeholder="Sua senha aqui..."[(ngModel)]="userModel.password">
+      </div>
+      <button class="butao-enviar">Enviar</button>
+     </div>
+    </form>
+    <p id="mensagem" *ngIf="mensagem != ''">{{mensagem}}</p>
+
 
 
